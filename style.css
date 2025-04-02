@@ -30,6 +30,7 @@ padding-block: 2.8ren;
 main{
     background-color: var(--white);
     padding: 2rem;
+    border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
 .conta label,.gorjeta label .pessoas label{
@@ -63,7 +64,7 @@ main{
      color: var(--green-300);
 }
 
-.conta,.gorjeta{
+.conta,.gorjeta,.pessoas{
     margin-bottom: 2rem;
 }
 
@@ -112,3 +113,34 @@ main{
             display: none;
         }
     
+
+        .resultados {
+            background-color: var(--green-800);
+            border-radius: 0.9375rem;
+            padding: 1.5rem;
+            }
+            
+            .resultados div {
+            border: 1px solid  red
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .resultados p {
+                color: var(-green-400)
+                font-size: 0.8125rem;
+                }
+
+                .resultados p strong {
+                color: var(--white)
+                font-size: 1rem;
+                }
+
+                .resultados div> strong {
+                color: var(-light-green) ;
+                font-size: 2rem;
+                }
+            
+                
+        
