@@ -62,7 +62,7 @@ main{
      color: var(--green-300);
 }
 
-.conta{
+.conta,.gorjeta{
     margin-bottom: 2rem;
 }
 
@@ -71,8 +71,6 @@ main{
     }
 
     .gorjeta div {
-    border: 1px solid
-    red
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,3 +81,28 @@ main{
     width: 100%;
      
     }
+
+.gorjeta input {
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding-block: 0.4rem;
+    border-radius: 0.3125rem;
+    background-color: var(--green-800);
+    color: var(--white)
+    }
+
+    .gorjeta #outra {
+        width: 100%;
+        background-color:
+        var(--green-100);
+        color: var(--green-800);
+        }
+
+        
+        .gorjeta #outra::placeholder {
+        color:var(--green-300)
+        }
+    
