@@ -16,6 +16,8 @@
     --green-800: #00474b;
     --light-green: #26c2ae;
     --white: #fff;
+    --green-hover: #9FE8DF;
+    --danger: #E17457;
 }
 body{
 background-color: var(--green-200)
@@ -33,12 +35,19 @@ main{
     border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
+   .gorjeta input[type="button"]:hover
+   .resultados button:hover {
+   background-color: var(-green-hover)
+   cursor: pointer;
+   }
+
+
 .conta label,.gorjeta label .pessoas label{
     color: var(--green-500);
     font-weight: 700;
     }
 
-    .conta div,.pessoas div{
+    .conta div,.pessoas .input-box{
     margin-top: 0.4rem;
     background-color: var(-green-100);
     padding: 0.4rem 1.2rem;
@@ -68,10 +77,16 @@ main{
     margin-bottom: 2rem;
 }
 
-.conta:has(input:focus)div,
-.pessoas:has(input:focus)div {
-    outline: 2px solid var(-light-green)
-    }
+
+.conta:has(input: focus) div,
+.conta:has(input:hover) div,
+.pessoas:has (input:focus) .input-box,
+.pessoas:has(input:hover) .input-box,
+.gorjeta #outra:focus,
+.gorjeta #outra:hover {
+outline: 2px solid var(-light-green)
+cursor: pointer;
+}
 
     .gorjeta div {
     margin-top: 1rem;
@@ -109,9 +124,24 @@ main{
         color:var(--green-300)
         }
 
-        .pessoas #erro{
+        .pessoas.textos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            }
+
+            .pessoas #erro-div{
+            outline: 2px solid var(--danger)
+            
+            }
+
+            .pessoas #erro {
+            font-size: 0.75rem;
+            color: var(-danger):
+            font-weight: 700;
             display: none;
-        }
+            }
+        
     
 
         .resultados {
@@ -160,6 +190,12 @@ main{
                     font-size: 1.25rem;
                     padding-block: 0.5rem;
                     }
+
+                    .conta input::-webkit-inner-spin-button,
+                    .pessoas input::-webkit-inner-spin-button,
+                    .gorjeta #outra:: -webkit-inner-spin-button {
+                    display: none;
+                    }
                 
                     @media (min-width: 920px) {
 
@@ -191,9 +227,7 @@ main{
                         width: 100%;
                         }
 
-                        .conta input::-webkit-inner-spin-button,
-                        .pessoas input::-webkit-inner-spin-button {
-                         display: none;}
+                        
 
                         .gorjeta div {
                         grid-template-columns: 1fr 1fr 1fr;
